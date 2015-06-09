@@ -1,0 +1,159 @@
+﻿#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+    #wrapper.toggled {
+        padding-left: 250px;
+    }
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    top: 53px;
+    bottom: 0;
+    left: 250px;
+    width: 0;
+    margin-left: -250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #2f2f2f;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+    #sidebar-wrapper li > ul {
+        background-color: #f8f8f8;
+        margin-bottom: 0;
+    }
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    /*position: absolute;
+    margin-right: -250px;*/
+    position: relative;
+    margin-right: 0;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    .sidebar-nav li {
+        text-indent: 20px;
+        line-height: 40px;
+    }
+
+        .sidebar-nav li a {
+            display: block;
+            text-decoration: none;
+            color: #e4e4e4;
+            border-right: #1f1f1f 1px solid;
+            border-bottom: #1f1f1f 1px solid;
+        }
+
+    .sidebar-nav .menu-child a {
+        border-bottom: #808080 1px solid;
+        color: #2f2f2f;
+    }
+
+        
+    .sidebar-nav li a:active,
+    .sidebar-nav li a:focus,
+    .sidebar-nav li a:hover {
+        text-decoration: none;
+        background: #808080;
+        color: #000;
+    }
+
+.menu-child  {
+        text-indent: 20px;
+        line-height: 30px !important;
+    }
+
+.menu-child  a {	
+	padding-left:20px;
+}
+
+.menu-parent-active {
+    /*NOT USED AT THE MOMENT*/
+}
+
+ .tytle {font-size:large}
+        .pagination>li>a{color:white !important}
+        th{display:none}
+
+.menu-child-active {
+    text-decoration: none;
+    background: #1684e2;
+    color:#fff !important ; 
+    font-weight: bold;
+}
+
+@media (min-width:768px) {
+    /*#wrapper {
+        padding-left: 250px;
+    }
+
+        #wrapper.toggled {
+            padding-left: 0px;
+        }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        position: relative;
+    }
+        
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+        */
+    /*CROME AND SAFARY*/
+    #sidebar-wrapper::-webkit-scrollbar {
+        width: 4px;
+        background-color: #d9d9d9;
+    }
+
+    #sidebar-wrapper::-webkit-scrollbar-track {
+        width: 4px;
+    }
+
+    #sidebar-wrapper::-webkit-scrollbar-thumb {
+        background-color: #1684e2;
+    }
+
+    .navbar-brand {
+        cursor: pointer;
+    }
+}
